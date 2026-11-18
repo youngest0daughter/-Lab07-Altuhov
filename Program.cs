@@ -98,46 +98,58 @@
 //     Console.WriteLine(ex5r+1);
 // }
 //Итоговая задача. «Журнал оценок»
-int[] grades = {4,3,2,5,5,5,4,3};
-double msum = 0;
-int min = 2;
-int max = 0;
-int two = 0;
-int five = 0;
- foreach (int n in grades)
+// int[] grades = {4,3,2,5,5,5,4,3};
+// double msum = 0;
+// int min = 2;
+// int max = 0;
+// int two = 0;
+// int five = 0;
+//  foreach (int n in grades)
+// {
+//     Console.Write($"{n} ");
+// }
+// Console.WriteLine("");
+//  foreach (int n in grades)
+// {
+//     msum += n;
+// }
+// Console.WriteLine($"Средняя оценка: {msum/8}");
+// for (int i = 1; i < grades.Length; i++){
+//     if (grades[i] < min){
+//         min = grades[i];
+//     }
+//     if (grades[i] > max){
+//         max = grades[i];
+//     }
+// }
+// Console.WriteLine($"минимальная оценка: {min}, максимальная оценка: {max}");
+// for (int i = 0; i < grades.Length; i++){
+//     if (grades[i] == 2){
+//         two += 1;
+//     }
+//     if (grades[i] == 5){
+//         five += 1;
+//     }
+// }
+// Console.WriteLine($"двоек: {two}, пятерок: {five}");
+// if (msum/8 > 4.5){
+//     Console.WriteLine("Отличник");
+// }
+// else if (msum/8 > 3.5 && msum/8 < 4.5){
+//     Console.WriteLine("Хорошист");
+// }
+// else {
+//     Console.WriteLine("Есть над чем поработать"); 
+// }
+//Дополнительное задание ★★★
+int[] arr = { 1, 2, 3, 4, 5, 6 };
+int a = 0;
+for (int i = 0; i < 4; i++){
+    a = arr[i];
+    arr[i] = arr[5-i];
+    arr[5-i] = a;
+}
+ foreach (int n in arr)
 {
     Console.Write($"{n} ");
-}
-Console.WriteLine("");
- foreach (int n in grades)
-{
-    msum += n;
-}
-Console.WriteLine($"Средняя оценка: {msum/8}");
-for (int i = 1; i < grades.Length; i++){
-    if (grades[i] < min){
-        min = grades[i];
-    }
-    if (grades[i] > max){
-        max = grades[i];
-    }
-}
-Console.WriteLine($"минимальная оценка: {min}, максимальная оценка: {max}");
-for (int i = 0; i < grades.Length; i++){
-    if (grades[i] == 2){
-        two += 1;
-    }
-    if (grades[i] == 5){
-        five += 1;
-    }
-}
-Console.WriteLine($"двоек: {two}, пятерок: {five}");
-if (msum/8 > 4.5){
-    Console.WriteLine("Отличник");
-}
-else if (msum/8 > 3.5 && msum/8 < 4.5){
-    Console.WriteLine("Хорошист");
-}
-else {
-    Console.WriteLine("Есть над чем поработать"); 
 }
