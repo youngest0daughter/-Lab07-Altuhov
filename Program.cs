@@ -61,19 +61,39 @@
 //     Console.Write(n + " ");
 // }
 // Задание 5
-int[] ex4 = new int[5];
-int ex4r = 0;
-for (int i = 0; i < 5; i++){
-    ex4[i] = Convert.ToInt32(Console.ReadLine());
-}
-for (int i = 0; i < ex4.Length; i++){
-    if (ex4[i]%2 == 0){
-        ex4r += 1;
+// int[] ex4 = new int[5];
+// int ex4r = 0;
+// for (int i = 0; i < 5; i++){
+//     ex4[i] = Convert.ToInt32(Console.ReadLine());
+// }
+// for (int i = 0; i < ex4.Length; i++){
+//     if (ex4[i]%2 == 0){
+//         ex4r += 1;
+//     }
+// }
+// Console.WriteLine("");
+// for (int i = 4; i >= 0; i--){
+//     Console.WriteLine($"{ex4[i]}");
+// }
+// Console.WriteLine($"четных чисел: {ex4r}");
+// Console.WriteLine("");
+ // Задание 6
+string[] names = { "Анна", "Игорь",
+"Мария", "Олег", "Ольга" };
+string ex5 = Console.ReadLine();
+int ex5r = 0;
+int ex5rr = 0;
+for (int i = 0; i < names.Length; i++){
+    if (names[i] == ex5){
+        ex5r = i;
+    }
+    else {
+        ex5rr +=1;
     }
 }
-Console.WriteLine("");
-for (int i = 4; i >= 0; i--){
-    Console.WriteLine($"{ex4[i]}");
+if (ex5rr == 5){
+    Console.WriteLine("Не найдено");
 }
- Console.WriteLine($"четных чисел: {ex4r}");
- 
+else{
+    Console.WriteLine(ex5r+1);
+}
