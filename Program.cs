@@ -78,22 +78,66 @@
 // Console.WriteLine($"четных чисел: {ex4r}");
 // Console.WriteLine("");
  // Задание 6
-string[] names = { "Анна", "Игорь",
-"Мария", "Олег", "Ольга" };
-string ex5 = Console.ReadLine();
-int ex5r = 0;
-int ex5rr = 0;
-for (int i = 0; i < names.Length; i++){
-    if (names[i] == ex5){
-        ex5r = i;
+// string[] names = { "Анна", "Игорь",
+// "Мария", "Олег", "Ольга" };
+// string ex5 = Console.ReadLine();
+// int ex5r = 0;
+// int ex5rr = 0;
+// for (int i = 0; i < names.Length; i++){
+//     if (names[i] == ex5){
+//         ex5r = i;
+//     }
+//     else {
+//         ex5rr +=1;
+//     }
+// }
+// if (ex5rr == 5){
+//     Console.WriteLine("Не найдено");
+// }
+// else{
+//     Console.WriteLine(ex5r+1);
+// }
+//Итоговая задача. «Журнал оценок»
+int[] grades = {4,3,2,5,5,5,4,3};
+double msum = 0;
+int min = 2;
+int max = 0;
+int two = 0;
+int five = 0;
+ foreach (int n in grades)
+{
+    Console.Write($"{n} ");
+}
+Console.WriteLine("");
+ foreach (int n in grades)
+{
+    msum += n;
+}
+Console.WriteLine($"Средняя оценка: {msum/8}");
+for (int i = 1; i < grades.Length; i++){
+    if (grades[i] < min){
+        min = grades[i];
     }
-    else {
-        ex5rr +=1;
+    if (grades[i] > max){
+        max = grades[i];
     }
 }
-if (ex5rr == 5){
-    Console.WriteLine("Не найдено");
+Console.WriteLine($"минимальная оценка: {min}, максимальная оценка: {max}");
+for (int i = 0; i < grades.Length; i++){
+    if (grades[i] == 2){
+        two += 1;
+    }
+    if (grades[i] == 5){
+        five += 1;
+    }
 }
-else{
-    Console.WriteLine(ex5r+1);
+Console.WriteLine($"двоек: {two}, пятерок: {five}");
+if (msum/8 > 4.5){
+    Console.WriteLine("Отличник");
+}
+else if (msum/8 > 3.5 && msum/8 < 4.5){
+    Console.WriteLine("Хорошист");
+}
+else {
+    Console.WriteLine("Есть над чем поработать"); 
 }
