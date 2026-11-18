@@ -32,3 +32,31 @@ foreach (int price in prices)
 Console.WriteLine($"общая сумма цен: {sum}");
 Console.WriteLine($"средняя цена: {(double)sum / prices.Length}");
 Console.WriteLine($"товаров с ценой больше 100: {msum}");
+Console.WriteLine("");
+int max = prices[0];
+int min = prices[0];
+int index = 0;
+for (int i = 1; i < prices.Length; i++){
+    if (prices[i] < min){
+        min = prices[i];
+    }
+    if (prices[i] > max){
+        max = prices[i];
+    }
+}
+for (int i = 1; i < prices.Length; i++){
+    if (prices[i] == max){
+        index = i;
+    }
+}
+Console.WriteLine($"Минимальная цена:{min}, индекс элемента с максимальной ценой {index}");
+Console.WriteLine("");
+int[] balance = { 100, -50, 20, -5, 0, 75 };
+for (int i = 0; i < balance.Length; i++){
+    if (balance[i] < 0){
+        balance[i] = 0;
+    }
+}
+foreach (int n in balance){
+    Console.Write(n + " ");
+}
