@@ -60,7 +60,7 @@
 // foreach (int n in balance){
 //     Console.Write(n + " ");
 // }
-// Задание 4
+// Задание 5
 int[] ex4 = new int[5];
 int ex4r = 0;
 for (int i = 0; i < 5; i++){
@@ -76,3 +76,4 @@ for (int i = 4; i >= 0; i--){
     Console.WriteLine($"{ex4[i]}");
 }
  Console.WriteLine($"четных чисел: {ex4r}");
+ 
